@@ -11,9 +11,24 @@ This method relies on graph theory, where an image is depicted as a graph with i
 The objective is to divide the graph into multiple subgraphs, each representing a segment in the image. The basis for this division is the "ratio cut," calculated as the total weight of the cut edges divided by the sum of the sizes of the various subgraphs. The aim is to minimize this ratio cut, leading to segments that are internally coherent yet distinct from one another.
 ## Approach
 For this task, I first calculated the pixel intensity and position differences and using it I calculated the affinity matrix (similarity score) utilizing the equations mentioned below.
+
+![Screenshot 2024-05-15 204027](https://github.com/K-Tanishq/Image-Segmentation/assets/169484818/f3ccfa6d-7396-48ee-8acd-8dfbe0463792)
+
 Then I calculated the degree matrix, which is a diagonal matrix, by summing up elements of the row and giving the diagonal positions that value.
 #### D = np.diag(np.sum(s, axis=1))
 Then for calculating Laplacian matrix, I used the formula,
 #### L = D - s
-For ratio- cut problem:
+#### For ratio- cut problem:
+
+![Screenshot 2024-05-15 204047](https://github.com/K-Tanishq/Image-Segmentation/assets/169484818/fbd887c0-96d3-42dc-bf51-8c6e2ed603fd)
+
 Solving the above equation we get the answer of the H matrix as the top K min eigenvalue vectors. I first calculated the eigen values and eigen vectors. After calculating the eigen values and eigen vector, I sorted the eigen values in ascending order and return the corresponding indices .Then I selected the first k smallest eigen values and then selected the columns of their eigen vectors and took them as clusters to be used in K-means clustering.
+
+## Sample Outputs
+![km3](https://github.com/K-Tanishq/Image-Segmentation/assets/169484818/b7b43a71-15bf-473c-9d3b-2eeabd22f93c)
+![Screenshot 2024-05-15 204206](https://github.com/K-Tanishq/Image-Segmentation/assets/169484818/9e42c0ef-f6de-46c5-9955-cd26dd79b5ed)
+![Screenshot 2024-05-15 204220](https://github.com/K-Tanishq/Image-Segmentation/assets/169484818/73a1677f-791e-4c07-b8ec-ebf0d0020043)
+![Screenshot 2024-05-15 204244](https://github.com/K-Tanishq/Image-Segmentation/assets/169484818/ef3a8cfa-18bb-40ea-ba96-72f2c974ab6d)
+![Screenshot 2024-05-15 204315](https://github.com/K-Tanishq/Image-Segmentation/assets/169484818/70a0784c-3598-46ac-aa2d-9c7eb3332783)
+
+
