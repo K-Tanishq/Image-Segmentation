@@ -26,9 +26,12 @@ Solving the above equation we get the answer of the H matrix as the top K min ei
 
 ## Sample Outputs
 ![km3](https://github.com/K-Tanishq/Image-Segmentation/assets/169484818/b7b43a71-15bf-473c-9d3b-2eeabd22f93c)
+
 ![Screenshot 2024-05-15 204206](https://github.com/K-Tanishq/Image-Segmentation/assets/169484818/9e42c0ef-f6de-46c5-9955-cd26dd79b5ed)
 ![Screenshot 2024-05-15 204220](https://github.com/K-Tanishq/Image-Segmentation/assets/169484818/73a1677f-791e-4c07-b8ec-ebf0d0020043)
+
 ![Screenshot 2024-05-15 204244](https://github.com/K-Tanishq/Image-Segmentation/assets/169484818/ef3a8cfa-18bb-40ea-ba96-72f2c974ab6d)
+
 ![Screenshot 2024-05-15 204315](https://github.com/K-Tanishq/Image-Segmentation/assets/169484818/70a0784c-3598-46ac-aa2d-9c7eb3332783)
 
 
